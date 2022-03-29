@@ -15,4 +15,12 @@ const clients = [
   }
 ];
 
+clients.forEach((client) => {
+  const itemList = document.createElement('li');
+  const paragraph = document.createElement('p');
+  const text = document.createTextNode(client.name);
 
+  paragraph.appendChild(text);
+  itemList.appendChild(paragraph);
+  list.appendChild(itemList);
+})
