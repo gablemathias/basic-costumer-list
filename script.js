@@ -15,12 +15,19 @@ const clients = [
   }
 ];
 
+function createParagraph(textElement, parent){
+  const paragraph = document.createElement('p');
+  const text = document.createTextNode(textElement);
+  paragraph.appendChild(text);
+  parent.appendChild(paragraph);
+
+}
+
 clients.forEach((client) => {
   const itemList = document.createElement('li');
-  const paragraph = document.createElement('p');
-  const text = document.createTextNode(client.name);
 
-  paragraph.appendChild(text);
-  itemList.appendChild(paragraph);
+  createParagraph(client.name, itemList);
+  createParagraph(client.email, itemList);
+
   list.appendChild(itemList);
 })
