@@ -1,0 +1,10 @@
+ul{
+  font-weight: bold;
+  border-bottom: 2px;
+}
+
+li{
+  font-weight: 100;
+  list-style-type: square;
+}
+
